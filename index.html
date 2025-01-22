@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin's Default Page on dev102 WSL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            padding: 3px;
+            background-color: #D8DBE2;
+            font-family: Verdana, sans-serif;
+            font-size: 11pt;
+            text-align: center;
+        }
+        .page_header span {
+    margin: 15px 0px 0px 50px;
+    font-size: 180%;
+    font-weight: bold;
+}
+.floating_element {
+    position: relative;
+    float: left;
+}
+        main {
+            position: relative;
+            display: table;
+            width: 800px;
+            margin: 0 auto 3px auto;
+            border: 2px solid #212738;
+            background-color: #FFFFFF;
+        }
+        header {
+            height: 99px;
+            background-color: #F5F6F7;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        header img {
+            margin-right: 20px;
+        }
+        nav {
+            margin: 3px;
+            background-color: #FFFFFF;
+            text-align: left;
+        }
+        nav a {
+            display: block;
+            margin: 4px 6px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        nav a:hover {
+            background-color: #000;
+            color: #FFF;
+        }
+        section {
+            margin: 3px;
+            background-color: #FFFFFF;
+            text-align: left;
+        }
+        article {
+            padding: 4px 8px;
+            color: #000;
+            font-size: 100%;
+        }
+        h1 {
+            padding: 3px 6px;
+            background-color: #8E9CB2;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 112%;
+            text-align: center;
+        }
+        h1.red {
+            background-color: #CD214F;
+        }
+        pre {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px dotted #000;
+            background-color: #F5F6F7;
+            font-style: italic;
+        }
+        
+        ul {
+    list-style: inside; /* Die Punkte innerhalb des Rahmens anzeigen */
+    padding-left: 20px; /* Abstände vom Rand */
+    margin: 10px 0; /* Vertikale Abstände zur Liste */
+}
+
+li {
+    margin-bottom: 5px; /* Abstand zwischen den Listenpunkten */
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <header class="page_header">
+            <img src="./rgoerlach.jpeg" alt="Robin Goerlach" width="75px" height="99px">
+            <span class="floating_element">
+          dev00102 Default Page
+        </span>
+        </header>
+        <nav>
+    <h1>TABLE OF CONTENTS</h1>
+    <a href="#about">About</a>
+    <a href="#linux-config">Linux Testkonfiguration</a>
+    <a href="#software">Softwareentwicklung</a>
+    <a href="#links">Nützliche Links</a>
+    <a href="#training">Trainingsressourcen</a>
+</nav>
+        <section id="about">
+            <h1 class="red">Robin's Default Page on dev00102 WSL</h1>
+            <article>
+                <h2>Willkommen auf meiner Apache-Webseite!</h2>
+                <p>
+                    Diese Webseite wird unter Windows Subsystem for Linux (WSL) mit einer Debian-Distribution und dem Apache-Webserver betrieben. WSL ermöglicht es, Linux-Tools und -Dienste nahtlos auf einem Windows-System auszuführen, wodurch ich die Flexibilität von Linux und die Benutzerfreundlichkeit von Windows optimal nutzen kann.
+                </p>
+                <h3>Technische Details:</h3>
+                <ul>
+                    <li><strong>Betriebssystem:</strong> Debian unter WSL</li>
+                    <li><strong>Webserver:</strong> Apache HTTP Server</li>
+                    <li><strong>Entwicklung:</strong> Kombination aus leistungsstarken Linux-Werkzeugen und flexibler Webentwicklung</li>
+                </ul>
+                <h3>Warum diese Umgebung?</h3>
+                <p>
+                    Die Kombination aus WSL und Debian bietet eine ideale Plattform für die Entwicklung und das Hosting von Webanwendungen in einer Linux-nahen Umgebung, ohne auf die Vorteile eines Windows-Systems verzichten zu müssen.
+                </p>
+                <p>
+                    Vielen Dank für Ihren Besuch! Erkunden Sie diese Seite, um mehr über meine Projekte und Ideen zu erfahren. Ich freue mich auf Ihr Feedback!
+                </p>
+            </article>
+        </section>
+        <section id="linux-config">
+    <h1>Linux Testkonfiguration</h1>
+    <article>
+        <h2>Apache Webserver</h2>
+        <p>
+            Der <a href="http://localhost:80/">Apache-Webserver</a> ist eine leistungsstarke und flexible Plattform für das Hosting von Webseiten. In einer Linux-Testumgebung kann er verwendet werden, um sichere Verbindungen über HTTPS einzurichten und Module wie mod_rewrite oder mod_security zu testen.
+        </p>
+        <h2>Tomcat Server</h2>
+        <p>
+            <a href="http://localhost:8080/">Apache Tomcat</a> dient als Servlet-Container für Java-Anwendungen. Er eignet sich ideal, um REST-APIs und Java-basierte Webanwendungen zu hosten. Die Konfiguration von SSL und die Integration mit Apache erleichtern den sicheren Betrieb.
+        </p>
+        <h2>Datenbankserver</h2>
+        <p>
+            <strong>MySQL:</strong> MySQL ist eine weit verbreitete relationale Datenbank, ideal für transaktionsbasierte Anwendungen. In einer Testumgebung kann es zur Optimierung von Abfragen und Backup-Strategien verwendet werden.<br>
+            <strong>PostgreSQL:</strong> PostgreSQL bietet erweiterte Funktionen wie JSON-Unterstützung und eignet sich für komplexe Datenmodelle. Es wird häufig zur Optimierung der Leistungsfähigkeit und Skalierbarkeit getestet.
+        </p>
+        <h2>Sicherheitskonfiguration</h2>
+        <p>
+            <strong>Wazuh:</strong> Wazuh ist eine Open-Source-Lösung zur Sicherheitsüberwachung, die Angriffe erkennt und Abweichungen in der Konfiguration meldet.<br>
+            <strong>Lynis:</strong> Lynis ist ein Audit-Tool für Linux-Systeme, das Schwachstellen identifiziert und Best-Practice-Empfehlungen gibt.<br>
+            <strong>auditd:</strong> auditd ermöglicht die Überwachung sicherheitskritischer Ereignisse und bietet detaillierte Berichte über Systemaktivitäten.
+        </p>
+        <p>
+            Eine Kombination dieser Tools und Plattformen sorgt für eine stabile und sichere Linux-Testumgebung, die sowohl Webentwicklern als auch Administratoren optimale Bedingungen bietet.
+        </p>
+    </article>
+</section>
+        <section id="software">
+            <h1>Softwareentwicklung</h1>
+            <article>
+                <h2>Java und Java EE bzw. Spring Boot</h2>
+                <p>
+                    Java ist eine robuste Programmiersprache, die sich hervorragend für serverseitige Anwendungen eignet. Java EE erweitert Java um Werkzeuge für Unternehmensanwendungen, wie Servlets, JSP und EJB, und ermöglicht die Entwicklung skalierbarer Systeme.
+                </p>
+                
+                <p>
+                    Spring Boot vereinfacht die Entwicklung von Java-basierten Microservices. Durch automatische Konfiguration und ein breites Ökosystem ist es eine ausgezeichnete Wahl für moderne Webanwendungen.
+                </p>
+                <h2>React & Node.js</h2>
+                <p>
+                    React ist eine JavaScript-Bibliothek, die für die Entwicklung von Benutzeroberflächen verwendet wird. Mit ihrer komponentenbasierten Architektur erleichtert sie die Erstellung dynamischer und interaktiver Webanwendungen.
+                </p>
+
+                <p>
+                    Node.js ist eine serverseitige JavaScript-Laufzeitumgebung, die für ihre hohe Leistung und Skalierbarkeit bekannt ist. Sie eignet sich ideal für die Entwicklung von Echtzeitanwendungen wie Chats oder APIs.
+                </p>
+            </article>
+        </section>
+    <section id="links">
+    <h1>Nützliche Links</h1>
+    <article>
+        <h2>Persönliche Profile</h2>
+        <ul>
+            <li><a href="https://github.com/RobinGoerlach" target="_blank">GitHub</a></li>
+            <li><a href="https://www.xing.com/profile/Robin_Goerlach" target="_blank">Xing</a></li>
+            <li><a href="https://www.linkedin.com/in/robin-goerlach" target="_blank">LinkedIn</a></li>
+        </ul>
+        <h2>Entwicklungsressourcen für Software Entwicklung</h2>
+        <ul>
+            <li><a href="https://selfhtml.org" target="_blank">SELFHTML</a></li>
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs - Mozilla</a></li>
+            <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank">React Dokumentation</a></li>
+            <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js Dokumentation</a></li>
+            <li><a href="https://tailwindcss.com/docs" target="_blank">TailwindCSS Dokumentation</a></li>
+            <li><a href="https://daisyui.com/docs/" target="_blank">DaisyUI Dokumentation</a></li>
+            <li><a href="https://www.postgresql.org/docs/" target="_blank">PostgreSQL Dokumentation</a></li>
+            <li><a href="https://dev.mysql.com/doc/" target="_blank">MySQL Dokumentation</a></li>
+            <li><a href="https://httpd.apache.org/docs/" target="_blank">Apache Dokumentation</a></li>
+            <li><a href="https://tomcat.apache.org/tomcat-9.0-doc/" target="_blank">Tomcat Dokumentation</a></li>
+            <li><a href="https://docs.docker.com/" target="_blank">Docker Dokumentation</a></li>
+        </ul>
+    </article>
+</section>
+<section id="training">
+    <h1>Trainingsressourcen für Software Entwicklung</h1>
+    <article>
+        <ul>
+            <li><a href="https://www.linkedin.com/learning" target="_blank">LinkedIn Learning</a></li>
+            <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/shows/channel-9" target="_blank">Microsoft Channel 9</a></li>
+            <li><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:1" target="_blank">Oracle Learning Library</a></li>
+            <li><a href="https://developer.oracle.com/livelabs/" target="_blank">Oracle LiveLabs</a></li>
+            <li><a href="https://devgym.oracle.com/" target="_blank">Oracle Dev Gym</a></li>
+            <li><a href="https://www.youtube.com/user/OracleVideo" target="_blank">Oracle Developers auf YouTube</a></li>
+            <li><a href="https://blogs.oracle.com/" target="_blank">Oracle Blogs</a></li>            
+            <li><a href="https://docs.oracle.com/javase/8/docs/" target="_blank">Java Documentation</a> – Offizielle Dokumentation der Java Standard Edition.</li>
+            <li><a href="https://www.pluralsight.com" target="_blank">Pluralsight</a></li>
+            <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+        </ul>
+    </article>
+</section>
+<section id="linux-links">
+    <h1>Nützliche Links für Linux</h1>
+    <article>
+        <ul>
+            <li><a href="https://www.kernel.org/" target="_blank">The Linux Kernel Archives</a> – Offizielle Quelle für den Linux-Kernel.</li>
+            <li><a href="https://linuxize.com/" target="_blank">Linuxize</a> – Tutorials für Linux-Administratoren und -Nutzer.</li>
+            <li><a href="https://ubuntu.com/tutorials" target="_blank">Ubuntu Tutorials</a> – Praktische Anleitungen für Ubuntu-Nutzer.</li>
+            <li><a href="https://man7.org/linux/man-pages/" target="_blank">Linux Manual Pages</a> – Offizielle Linux-Handbuchseiten.</li>
+            <li><a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> – Ressourcen und Dokumentation für Arch Linux.</li>
+        </ul>
+    </article>
+</section>
+<section id="linux-training">
+    <h1>Trainingsressourcen für Linux</h1>
+    <article>
+        <ul>
+            <li><a href="https://linuxacademy.com/" target="_blank">Linux Academy (jetzt A Cloud Guru)</a> – Trainingsplattform für Linux und Cloud-Technologien.</li>
+            <li><a href="https://www.edx.org/course/introduction-to-linux" target="_blank">Introduction to Linux (edX)</a> – Kostenloser Einsteigerkurs zu Linux.</li>
+            <li><a href="https://ubuntu.com/training" target="_blank">Ubuntu Training</a> – Offizielle Trainingsprogramme für Ubuntu.</li>
+            <li><a href="https://www.redhat.com/en/services/training-and-certification" target="_blank">Red Hat Training</a> – Kurse und Zertifikate für Red Hat Enterprise Linux.</li>
+            <li><a href="https://www.linuxfoundation.org/training/" target="_blank">Linux Foundation Training</a> – Umfangreiche Trainingsangebote für Linux und Open-Source-Technologien.</li>
+        </ul>
+    </article>
+</section>
+</main>
+</body>
+</html>
